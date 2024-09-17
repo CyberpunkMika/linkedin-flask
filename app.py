@@ -12,4 +12,5 @@ def home():
 def yoururl():
     if request.method == "POST":
         return render_template("your_url.html", code=request.form["code"])
-    return redirect(url_for("home"))
+    else:
+        return "This is not valid"
